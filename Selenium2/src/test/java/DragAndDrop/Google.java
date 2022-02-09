@@ -2,7 +2,12 @@ package DragAndDrop;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.BeforeMethod;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 
@@ -18,7 +23,30 @@ public class Google {
   }
   
   @Test
-  public void f() {
+  public void search() {
+	  driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys("Infosys");
+	  
+  }
+  @Test
+  public void customisedXpath() {
+	 List<WebElement> match=driver.findElements(By.xpath("//input"));
+	 int total=match.size();
+	 System.out.println("No of element matching xpath "+total);
+	 
+	 for(int i=0;i<total;i++) 
+	 {
+		WebElement e=match.get(i);
+		System.out.println(e.getText());
+		if(e.isEnabled()==true) {
+			e.click();
+			System.out.println("click operation is performed for"+e);
+		}
+		else {
+			System.out.println("click operation is not avaliable for" +e);
+		}
+		
+		 
+	 }
   }
   
   @AfterMethod
