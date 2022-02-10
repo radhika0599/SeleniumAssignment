@@ -27,9 +27,19 @@ public class SwitchTab {
   @Test
   public void f() throws InterruptedException {
 	  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
-	  driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]/a")).click();  //.sendKeys(Keys.CONTROL+"t")
+	  String tab=Keys.chord(Keys.CONTROL,Keys.ENTER);
+	  
+	  driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]/a")).sendKeys(tab);  //.sendKeys(Keys.CONTROL+"t")
+	  for(String tab1 : driver.getWindowHandles()) {
+		  driver.switchTo().window(tab1);
+		  System.out.println("After opening new tab  "+driver.getCurrentUrl());
+		  
+	  }
+	  
 	   Thread.sleep(5000);
+	   
 	  driver.findElement(By.xpath("//*[@id=\"content\"]/h2[1]/a")).click();
+	  
 	  WebElement name=driver.findElement(By.id("search_type"));
 	  Select select=new Select(name);
 		Thread.sleep(5000);

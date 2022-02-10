@@ -23,8 +23,20 @@ public class Google {
   }
   
   @Test
-  public void search() {
-	  driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys("Infosys");
+  public void automateSearch() throws InterruptedException {
+	  driver.findElement(By.xpath("/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input")).sendKeys("java");
+	  List<WebElement> list= driver.findElements(By.xpath("//input"));
+	  Thread.sleep(5000);
+	  System.out.println(list.size());
+	  
+	  for(int i=0;i<list.size();i++) {
+		  String listitem=list.get(i).getText();
+		  if(listitem.contains("java tutorial")) {
+			  list.get(i).click();
+			  break;
+		  }
+	  }
+	  
 	  
   }
   @Test

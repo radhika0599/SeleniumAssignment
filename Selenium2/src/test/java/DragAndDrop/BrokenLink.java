@@ -57,10 +57,8 @@ public class BrokenLink {
 		  {
 			  System.out.println(linkurl +"-"+httpURLConnection.getResponseMessage() + "-"+HttpURLConnection.HTTP_NOT_FOUND);
 		  }
-	} catch (MalformedURLException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	} catch (IOException e) {
+	} 
+        catch (Exception e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}

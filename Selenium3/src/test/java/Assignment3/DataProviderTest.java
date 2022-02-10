@@ -21,11 +21,11 @@ public class DataProviderTest {
   
   @Test(dataProvider="credentials")
   public void f(String userId, String password) throws InterruptedException {
-	  driver.findElement(By.xpath("//*[@id=\"email\"]")).sendKeys(userId);
+	  driver.findElement(By.id("email")).sendKeys(userId);
 	  Thread.sleep(5000);
-	  driver.findElement(By.xpath("//*[@id=\"passContainer\"]")).sendKeys(password);
+	  driver.findElement(By.id("pass")).sendKeys(password);
 	  Thread.sleep(5000);
-	  driver.findElement(By.xpath("//*[@id=\"u_0_d_ti\"]")).click();
+	  driver.findElement(By.name("login")).click();
 	  Thread.sleep(5000);
 	String msg = driver.findElement(By.xpath("//*[@id=\"loginform\"]/div[2]/div[2]")).getText();
 	System.out.println(msg);
@@ -41,16 +41,16 @@ public class DataProviderTest {
   
   @DataProvider(name="credentials")
   public Object[][] data() {
-		Object[][] input=new Object[3][2];
+		Object[][] input=new Object[1][2];
 
 		input[0][0]="radhi";
 		input[0][1]="radhi123";
 		
-		input[0][0]=" ";
-		input[0][0]="ra87";
+		//input[0][0]=" ";
+		//input[0][0]="ra87";
 	
-		input[0][0]="radhika";
-		input[0][0]=" ";
+		//input[0][0]="radhika";
+		//input[0][0]=" ";
 
 		return input; 
   }
