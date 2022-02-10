@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Assignment4.SwitchTab">
+      <class name="Assignment4.PinCode">
         <methods>
-          <include name="f"/>
           <include name="beforeMethod"/>
+          <include name="f"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- Assignment4.SwitchTab -->
+      </class> <!-- Assignment4.PinCode -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

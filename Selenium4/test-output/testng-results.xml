@@ -2,24 +2,24 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-02-09T16:56:27 IST" name="Default suite" finished-at="2022-02-09T16:57:00 IST" duration-ms="33216">
+  <suite started-at="2022-02-10T18:56:13 IST" name="Default suite" finished-at="2022-02-10T18:56:45 IST" duration-ms="32192">
     <groups>
     </groups>
-    <test started-at="2022-02-09T16:56:27 IST" name="Default test" finished-at="2022-02-09T16:57:00 IST" duration-ms="33216">
-      <class name="Assignment4.SwitchTab">
-        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Assignment4.SwitchTab@2e005c4b]" started-at="2022-02-09T16:56:27 IST" name="beforeMethod" finished-at="2022-02-09T16:56:44 IST" duration-ms="17047" status="PASS">
+    <test started-at="2022-02-10T18:56:13 IST" name="Default test" finished-at="2022-02-10T18:56:45 IST" duration-ms="32192">
+      <class name="Assignment4.PinCode">
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:Assignment4.PinCode@5ffead27]" started-at="2022-02-10T18:56:13 IST" name="beforeMethod" finished-at="2022-02-10T18:56:27 IST" duration-ms="14460" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method signature="f()[pri:0, instance:Assignment4.SwitchTab@2e005c4b]" started-at="2022-02-09T16:56:44 IST" name="f" finished-at="2022-02-09T16:57:00 IST" duration-ms="15843" status="PASS">
+        <test-method signature="f()[pri:0, instance:Assignment4.PinCode@5ffead27]" started-at="2022-02-10T18:56:27 IST" name="f" finished-at="2022-02-10T18:56:45 IST" duration-ms="17497" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Assignment4.SwitchTab@2e005c4b]" started-at="2022-02-09T16:57:00 IST" name="afterMethod" finished-at="2022-02-09T16:57:00 IST" duration-ms="277" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:Assignment4.PinCode@5ffead27]" started-at="2022-02-10T18:56:45 IST" name="afterMethod" finished-at="2022-02-10T18:56:45 IST" duration-ms="204" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Assignment4.SwitchTab -->
+      </class> <!-- Assignment4.PinCode -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
