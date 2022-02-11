@@ -35,6 +35,7 @@ public class ExtentReport {
 		extent.setSystemInfo("Browser", "Chrome");
 		extent.attachReporter(htmlReporter);
 		
+		 System.setProperty("webdriver.chrome.driver","C:\\Users\\ASUS\\Documents\\Selenium\\2nd video\\chromedriver.exe");
 		driver=new ChromeDriver();
 		 driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
 		
@@ -42,10 +43,13 @@ public class ExtentReport {
 	}
 	
   @Test
-  public void testSucessful() {
-	  driver.get("https://en-gb.facebook.com/");
+  public void testSucessful() throws InterruptedException {
+	  driver.get("https://www.google.com");
+	  Thread.sleep(5000);
 	  extentTest=extent.createTest("Sucessful Test");
 	  extentTest.log(Status.PASS, "Test Method Sucessful");
+	  
+	  
 	 }
   
 	
